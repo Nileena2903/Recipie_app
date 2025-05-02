@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Recipie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>Add Recipie</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form  method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h2 style="color:black">{{msg}}</h2>
+					<input class="text" type="text" name="Rname" placeholder="Recipie name" required="">
+					<input class="text email" type="text" name="Rdesc" placeholder="Description" required="">
+					<input class="text" type="text" name="Ringre" placeholder="Ingredients" required="">
+					<input class="text w3lpass" type="file" name="pic">
+          <textarea name="inst" type="textarea" placeholder="Instructions" required=""></textarea>
+					<div class="wthree-text">
+				
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="ADD">
+				</form>
+	
+			</div>
+		</div>
+		<!-- copyright -->
+		
+		<!-- //copyright -->
+		
+</body>
+</html>
+
+<style>
+
+  /* General reset and layout */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #f4f7f9;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 40px 20px;
+  }
+  
+  /* Wrapper container */
+  .main-w3layouts.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Page Title */
+  .main-w3layouts h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0083b0;
+    margin-bottom: 30px;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  input[type="text"],
+  input[type="file"],
+  textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s border-color ease;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    border-color: #0083b0;
+    outline: none;
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    padding: 12px;
+    background-color: #0083b0;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s background-color ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #005f80;
+  }
+  
+  /* Error or success message */
+  h2 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: green; /* You can change based on success/failure */
+  }
+  
+</style>
+
